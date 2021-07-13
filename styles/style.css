@@ -1,0 +1,43 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* common css */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0px;
+}
+main {
+  margin: 0;
+}
+
+/* banner */
+.top-banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  background-color: #2d25a0;
+  height: 677px;
+  margin: 0px;
+}
+.banner {
+  margin-left: 156px;
+}
+.banner-title {
+  font-size: 64px;
+  color: #ffffff;
+}
+.banner-button {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 24px;
+  background-color: #e02c6d;
+}
+.banner-button span {
+  padding-right: 8px;
+}
+.banner-photo img {
+  width: 593px;
+  height: 469px;
+}
