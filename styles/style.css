@@ -52,32 +52,38 @@ main {
 
 /* player section */
 .top-players,
-.hightlight {
+.hightlight,
+.copa-winners {
   width: 1100px;
   margin-top: 70px;
   margin-bottom: 70px;
 }
-.players {
+.players,
+.most-winners {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 27px;
 }
-.player {
+.player,
+.winner {
   padding: 15px;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
 }
-.player .thumbnail img {
+.player .thumbnail img,
+.winner .cup-thumbnail img {
   width: 300px;
   height: 256px;
 }
-.player-title {
+.player-title,
+.winner-title {
   font-size: 28px;
   color: #18191f;
   margin-top: 11px;
   margin-bottom: 6px;
 }
-.player-detail {
+.player-detail,
+.winner-details {
   font-size: 16px;
   font-weight: 400;
   color: #6c6c6c;
@@ -160,6 +166,20 @@ main {
 .photo_details p {
   color: rgba(230, 217, 217, 0.76);
   font-weight: 700;
+}
+/* copa-most-winner */
+.winner .time {
+  padding-left: 90px;
+  color: orange;
+}
+
+.winner:hover {
+  box-shadow: 5px 5px 30px grey;
+}
+.winner:hover .time {
+  color: #0a0826;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in;
 }
 
 /* racism awareness */
