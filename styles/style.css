@@ -8,9 +8,12 @@ body {
 }
 main {
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* banner */
+/* banner styles */
 .top-banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -27,17 +30,76 @@ main {
   font-size: 64px;
   color: #ffffff;
 }
-.banner-button {
+
+/* banner button styles starts */
+.banner-button,
+.highlight-button {
   color: white;
   font-size: 16px;
   text-decoration: none;
   padding: 10px 24px;
   background-color: #e02c6d;
 }
-.banner-button span {
+.banner-button span,
+.highlight-button span {
   padding-right: 8px;
 }
+/* banner button styles ends */
 .banner-photo img {
   width: 593px;
   height: 469px;
+}
+
+/* player section */
+.top-players,
+.hightlight {
+  width: 1100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+.players {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 27px;
+}
+.player {
+  padding: 15px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player .thumbnail img {
+  width: 300px;
+  height: 256px;
+}
+.player-title {
+  font-size: 28px;
+  color: #18191f;
+  margin-top: 11px;
+  margin-bottom: 6px;
+}
+.player-detail {
+  font-size: 16px;
+  font-weight: 400;
+  color: #6c6c6c;
+}
+
+/* highlight section */
+.copa-highlight {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 60px;
+}
+.highlight-title {
+  font-size: 48px;
+  color: #0a0826;
+  margin: 10px 5px 6px;
+}
+.highlight-summary {
+  font-size: 16px;
+  color: #6c6c6c;
+  margin: 2px 5px 24px;
+}
+.copa-highlight .highlight-photo img {
+  width: 567px;
+  height: 427px;
 }
