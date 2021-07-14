@@ -1,10 +1,34 @@
 /* google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
-/* common css */
+/*............. 
+header css 
+..............*/
+header {
+  height: 60px;
+  background-color: #2d25a0;
+}
+.header-content {
+  display: flex;
+  justify-content: space-around;
+}
+.left-side-nav,
+.right-side-nav {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.left-side-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 36px;
+}
+/* header css ends */
+/*.......... common css .............*/
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0px;
+  margin: 0;
 }
 main {
   margin: 0;
@@ -13,18 +37,32 @@ main {
   align-items: center;
 }
 
+/*.......... common css ends.............*/
 /* banner styles */
 .top-banner {
+  background-color: #2d25a0;
+  height: 677px;
+  margin: 0px;
+  padding-top: 70px;
+}
+.banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  background-color: #2d25a0;
-  height: 677px;
-  margin: 0px;
 }
-.banner {
-  margin-left: 156px;
+/* top-banner animation part starts */
+.top-banner:hover .banner-image {
+  transform: scale(1.2) rotate(360deg);
+  transition: transform 1.5s ease-in;
+}
+.top-banner:hover .top-banner-button {
+  transition: transform 1.5s ease-in;
+  transform: translate(370px, 75px) rotate(360deg);
+}
+/* top-banner animation part ends */
+.banner-one {
+  padding-left: 156px;
 }
 .banner-title {
   font-size: 64px;
@@ -33,7 +71,8 @@ main {
 
 /* banner button styles starts */
 .banner-button,
-.highlight-button {
+.highlight-button,
+.nav-button {
   color: white;
   font-size: 16px;
   text-decoration: none;
@@ -44,12 +83,15 @@ main {
 .highlight-button span {
   padding-right: 8px;
 }
+.nav-button span {
+  padding-left: 8px;
+}
 /* banner button styles ends */
 .banner-photo img {
   width: 593px;
   height: 469px;
 }
-
+/* banner ends */
 /* player section */
 .top-players,
 .hightlight,
@@ -88,8 +130,10 @@ main {
   font-weight: 400;
   color: #6c6c6c;
 }
+/* player section ends */
 
 /* highlight section */
+
 .copa-highlight {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -105,6 +149,9 @@ main {
   color: #0a0826;
   margin: 10px 5px 6px;
 }
+.highligh-mark {
+  color: orange;
+}
 .highlight-summary {
   font-size: 16px;
   color: #6c6c6c;
@@ -114,6 +161,7 @@ main {
   width: 567px;
   height: 427px;
 }
+
 /* event photo gallary section */
 .photo-galary {
   background-color: #f3f1ff;
@@ -128,8 +176,8 @@ main {
   grid-column-gap: 20px;
 }
 .photo-frame {
-  width: 500px;
-  height: 450px;
+  width: 440px;
+  height: 420px;
   border: 2px solid lightblue;
   border-radius: 10px;
   position: relative;
@@ -145,7 +193,7 @@ main {
   top: 0;
   display: none;
   text-align: center;
-  width: 500px;
+  width: 440px;
 }
 .photo-frame:hover .photo_details {
   display: block;
@@ -167,7 +215,8 @@ main {
   color: rgba(230, 217, 217, 0.76);
   font-weight: 700;
 }
-/* copa-most-winner */
+
+/* copa-most-winner part */
 .winner .time {
   padding-left: 90px;
   color: orange;
@@ -182,7 +231,7 @@ main {
   transition: transform 0.5s ease-in;
 }
 
-/* racism awareness */
+/* racism awareness part */
 .no-racism {
   background-color: gainsboro;
   padding: 40px 60px 40px;
@@ -202,6 +251,7 @@ main {
   transform: scale(1.05);
   transition: transform 1s;
 }
+
 /* footer */
 .footer-section {
   display: flex;
@@ -223,4 +273,278 @@ footer img {
 }
 .copywrite {
   font-size: 14px;
+}
+
+/*...........................
+        Media Queries
+ ............................*/
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+  body {
+    overflow-x: hidden;
+  }
+  /* navigation responsive */
+  header {
+    height: 160px;
+    margin: 0;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .left-side-nav,
+  .right-side-nav {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /* some common responsive */
+
+  .top-banner,
+  .top-players,
+  .highlight,
+  .copa-winners,
+  .no-racism {
+    width: 100%;
+    height: 100%;
+  }
+  .players,
+  .most-winners,
+  .banner,
+  .copa-highlight {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+
+  /* banner responsive */
+
+  .banner-one {
+    margin-bottom: 53px;
+    padding-left: 30px;
+  }
+
+  .banner-text {
+    margin-bottom: 30px;
+  }
+  .banner-title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .banner-photo {
+    padding-bottom: 58px;
+  }
+  .banner-photo img {
+    width: 385px;
+    height: 290.17px;
+    padding-left: 20px;
+  }
+
+  .banner-title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .top-banner:hover .top-banner-button {
+    transition: transform 1.5s ease-in;
+    transform: translate(210px, 10px) rotate(360deg);
+  }
+  .top-banner:hover .banner-image {
+    transform: scale(1.01) rotate(360deg);
+    transition: transform 1.5s ease-in;
+  }
+  /* playes & copa-winners session responsive */
+  .player,
+  .winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+  }
+  /* photo album */
+  .photo-galary {
+    padding: 10px;
+  }
+  .photo-album {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+  .photo-frame {
+    width: 350px;
+    height: 330px;
+  }
+  .photo img {
+    width: 100%;
+  }
+  .photo_details {
+    width: 350px;
+  }
+  /* hightlight section responsive */
+  .hightlight {
+    width: 400px;
+  }
+
+  .highlight-text {
+    width: 375px;
+    margin-bottom: 40px;
+  }
+  .copa-highlight .highlight-photo img {
+    width: 375px;
+  }
+  /* racism section responsive */
+  .no-racism {
+    width: 270px;
+  }
+  .no-racism .race-aware img {
+    width: 100%;
+  }
+  /* fotter responsive */
+  .footer-section {
+    margin-bottom: 187px;
+  }
+  footer img {
+    width: 250px;
+  }
+}
+
+/*...................
+ Tablet  Devices
+ ................... */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /* navigation responsive */
+  header {
+    height: 160px;
+    margin: 0;
+  }
+  .header-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .left-side-nav,
+  .right-side-nav {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* some common responsive */
+
+  .top-banner,
+  .top-players,
+  .highlight,
+  .copa-highlight,
+  .copa-winners,
+  .no-racism {
+    width: 100%;
+    height: 100%;
+  }
+  .players,
+  .most-winners,
+  .banner,
+  .copa-highlight {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+
+  /* banner responsive */
+  .banner-one {
+    margin-bottom: 53px;
+    padding-left: 30px;
+  }
+
+  .banner-text {
+    margin-bottom: 30px;
+  }
+  .banner-title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .banner-photo {
+    padding-bottom: 58px;
+  }
+  .banner-photo img {
+    width: 350px;
+    height: 350.17px;
+    padding-left: 20px;
+  }
+
+  .banner-title {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  .top-banner:hover .top-banner-button {
+    transition: transform 1.5s ease-in;
+    transform: translate(95px, 15px) rotate(360deg);
+  }
+  .top-banner:hover .banner-image {
+    transform: scale(1.1) rotate(360deg);
+    transition: transform 1.5s ease-in;
+  }
+  /* playes & copa-winners session responsive */
+  .player,
+  .winner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+  }
+  /* photo album */
+  .photo-galary {
+    padding: 10px;
+  }
+  .photo-album {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .photo-frame {
+    width: 350px;
+    height: 330px;
+  }
+  .photo img {
+    width: 100%;
+  }
+  .photo_details {
+    width: 350px;
+  }
+  /* hightlight section responsive */
+  .hightlight {
+    width: 730px;
+  }
+
+  .highlight-text {
+    width: 320px;
+    margin-bottom: 40px;
+    padding-right: 20px;
+  }
+  .copa-highlight .highlight-photo img {
+    width: 310px;
+  }
+  /* racism section responsive */
+  .no-racism {
+    width: 600px;
+  }
+  .no-racism .race-aware img {
+    width: 100%;
+  }
+  /* fotter responsive */
+  .footer-section {
+    margin-bottom: 187px;
+  }
+  footer img {
+    width: 250px;
+  }
 }
